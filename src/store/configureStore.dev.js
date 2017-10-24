@@ -5,7 +5,7 @@ import {createLogger} from 'redux-logger'
 import reducers from '../reducers'
 import middlewares from '../middlewares'
 
-import DevTools from '../containers/DevTools'
+import DevTools from '../pages/DevTools'
 
 const configureStore = (routerReducer, middleware) => preloadedState => {
   console.log(...reducers)
