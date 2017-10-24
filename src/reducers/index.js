@@ -6,7 +6,7 @@ const btnReducer = (state={color: 'white', isClicked: false}, action) => {
     case BTN_CLICK:
       return {
         ...state,
-        color: state.isClicked ? 'black' : 'red',
+        color: state.isClicked ? 'black' : 'blue',
         isClicked: !state.isClicked,
         action: action.type
       }
@@ -15,8 +15,6 @@ const btnReducer = (state={color: 'white', isClicked: false}, action) => {
   }
 }
 
-const test = () => ({lalala: 123})
-
-const rootReducer = combineReducers({btnReducer, test})
+const rootReducer = combineReducers({btnReducer})
 
 export default rootReducer

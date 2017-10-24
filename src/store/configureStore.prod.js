@@ -7,7 +7,7 @@ import middlewares from '../middlewares'
 export const configureStore = (routerReducer, middleware) => preloadedState => (
   createStore(
     combineReducers({
-      ...reducers,
+      reducers,
       router: routerReducer
     }),
     preloadedState,

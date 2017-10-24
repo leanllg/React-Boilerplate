@@ -3,17 +3,18 @@ import {connect} from 'react-redux'
 import {clickBtn} from '../actions'
 
 const BtnField = ({clickBtn, color}) => {
+  console.log(color)
   return (
     <div>
       <button style={{backgroundColor: color}} onClick={() => clickBtn()}>
-        Click Mgreate
+        Click Me
       </button>
     </div>
   )
 }
 
 const mapStateToProps = (state, ownProps) => {
-  const {color} = state
+  const {color} = state.reducers.btnReducer
   return {
     color
   }

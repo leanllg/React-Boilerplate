@@ -11,7 +11,7 @@ const configureStore = (routerReducer, middleware) => preloadedState => {
   console.log(...reducers)
   const store = createStore(
     combineReducers({
-      ...reducers,
+      reducers,
       router: routerReducer
     }),
     preloadedState,
