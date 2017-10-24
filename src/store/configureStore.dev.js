@@ -3,20 +3,21 @@ import thunk from 'redux-thunk'
 import {createLogger} from 'redux-logger'
 
 import reducers from '../reducers'
-import middlewares from '../middleware'
+import middlewares from '../middlewares'
 
-import Devtools from '../containers/Devtools'
+import DevTools from '../containers/DevTools'
 
-export const configureStore = (routerReducer, middleware) => preloadedState => {
+const configureStore = (routerReducer, middleware) => preloadedState => {
+  console.log(...reducers)
   const store = createStore(
-    preloadedState,
     combineReducers({
       ...reducers,
       router: routerReducer
     }),
+    preloadedState,
     compose(
-      applyMiddleware(...middlewares, middleware, thunk),
-      Devtools.instrument()
+      applyMiddleware(middleware, ...middlewares, thunk, createLogger()),
+      DevTools.instrument()
     )
   )
 

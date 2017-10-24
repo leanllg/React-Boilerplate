@@ -4,11 +4,11 @@ import {Provider} from 'react-redux'
 import {ConnectedRouter} from 'react-router-redux'
 import {Route} from 'react-router'
 
-import App from '../pages/HomePage/HomePage'
+import App from '../containers/App'
 import DevTools from '../containers/DevTools'
 import {AppContainer} from 'react-hot-loader'
 
-const Root = ({ store }) => (
+const Root = ({ store, history }) => (
   <AppContainer>
     <Provider store={store}>
       <ConnectedRouter history={history}>
@@ -21,8 +21,8 @@ const Root = ({ store }) => (
   </AppContainer>
 )
 
-Root.propsTypes = {
-  store: PropsTypes.object.isRequired,
+Root.propTypes = {
+  store: PropTypes.object.isRequired,
 }
 
 export default Root

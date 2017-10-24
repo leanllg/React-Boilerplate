@@ -1,7 +1,7 @@
-import createHistory from 'history/createStore'
+import createHistory from 'history/createBrowserHistory'
 import {routerReducer, routerMiddleware} from 'react-router-redux'
 
-const history = createHistory()
+export const history = createHistory()
 
 const middleware = routerMiddleware(history)
 
@@ -10,7 +10,7 @@ let configureStore;
 if (process.env.NODE_ENV === 'production') {
   configureStore = require('./configureStore.prod')
 } else {
-  configureStore = require('./configureStore.dev')
+  configureStore = require('./configureStore.dev').default
 }
 
-module.exports = configureStore(history, middleware)
+export default configureStore(routerReducer, middleware)

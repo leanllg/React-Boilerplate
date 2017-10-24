@@ -4,9 +4,9 @@ import {Provider} from 'react-redux'
 import {ConnectedRouter} from 'react-router-redux'
 import {Route} from 'react-router'
 
-import App from '../pages/App'
+import App from '../containers/App'
 
-const Root = ({ store }) => (
+const Root = ({store, history}) => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <Route exact path='/' component={App} />
