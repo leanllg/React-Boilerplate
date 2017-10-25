@@ -7,7 +7,7 @@ import {selectedRedditSelector, postsByRedditSelector} from "../../reducers/sele
 
 export function fetchPostsApi(reddit) {
   return fetch(`http://www.reddit.com/r/${reddit}.json`)
-    .then(response => response.json)
+    .then(response => response.json())
     .then(json => json.data.children.map(child => child.data))
 }
 
@@ -32,7 +32,7 @@ export function* nextRedditChange() {
     const newReddit = yield select(selectedRedditSelector)
     const postsByReddit = yield select(postsByRedditSelector)
 
-    if (prevReddit !== newReddit && !postsByReddit) {
+    if (prevReddit !== newReddit && !postsByReddit[newReddit]) {
       yield fork(fetchPosts, newReddit)
     }
   }

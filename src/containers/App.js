@@ -6,12 +6,6 @@ import Picker from '../components/Picker'
 import Posts from '../components/Posts'
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-    this.handleChange = this.handleChange.bind(this)
-    this.handleRefreshClick = this.handleRefreshClick.bind(this)
-  }
-
   handleChange(nextReddit) {
     this.props.dispatch(selectReddit(nextReddit))
   }
@@ -27,7 +21,7 @@ class App extends Component {
     return (
       <div>
         <Picker value={selectedReddit}
-                onChange={this.handleChange}
+                onChange={(reddit)=>this.handleChange(reddit)}
                 options={[ 'reactjs', 'frontend' ]} />
         <p>
           {lastUpdated &&
@@ -38,7 +32,7 @@ class App extends Component {
           }
           {!isFetching &&
           <a href="#"
-             onClick={this.handleRefreshClick}>
+             onClick={()=>this.handleRefreshClick()}>
             Refresh
           </a>
           }
@@ -68,7 +62,7 @@ App.propTypes = {
 }
 
 function mapStateToProps(state) {
-  const { selectedReddit, postsByReddit } = state
+  const { selectedReddit, postsByReddit } = state.reducers
   const {
     isFetching,
     lastUpdated,
