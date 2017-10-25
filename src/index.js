@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Root from './routes/routes'
+import Root from './routes/index'
 import configureStore, {history} from './store/configureStore'
 import rootSaga from './utils/sagas'
 
