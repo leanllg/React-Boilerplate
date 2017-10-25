@@ -1,4 +1,4 @@
-import {BTN_CLICK} from '../actions'
+import {BTN_CLICK} from '../../actions/index'
 
 const consoleClick = store => next => action => {
   if (action.type === BTN_CLICK) {

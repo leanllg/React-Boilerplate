@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom'
 
 import Root from './routes/routes'
 import configureStore, {history} from './store/configureStore'
+import rootSaga from './utils/sagas'
 
 const store = configureStore()
-
+store.runSaga(rootSaga)
 const render = () => {
   ReactDOM.render(
     <Root store={store} history={history} />,

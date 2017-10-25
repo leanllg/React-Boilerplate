@@ -3,10 +3,9 @@ import {connect} from 'react-redux'
 import {clickBtn} from '../actions'
 
 const BtnField = ({clickBtn, color}) => {
-  console.log(color)
   return (
     <div>
-      <button style={{backgroundColor: color}} onClick={() => clickBtn()}>
+      <button style={{backgroundColor: color, display: 'inline-block'}} onClick={() => clickBtn()}>
         Click Me
       </button>
     </div>

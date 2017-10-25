@@ -1,14 +1,14 @@
 import {createStore, combineReducers, applyMiddleware, compose} from 'redux'
-import thunk from 'redux-thunk'
+import createSagaMiddleware from 'redux-saga'
 import {createLogger} from 'redux-logger'
 
 import reducers from '../reducers'
-import middlewares from '../middlewares'
+import middlewares from '../utils/middlewares'
 
-import DevTools from '../pages/DevTools'
+import DevTools from '../containers/DevTools'
 
+const sagaMiddleware = createSagaMiddleware()
 const configureStore = (routerReducer, middleware) => preloadedState => {
-  console.log(...reducers)
   const store = createStore(
     combineReducers({
       reducers,
@@ -16,7 +16,7 @@ const configureStore = (routerReducer, middleware) => preloadedState => {
     }),
     preloadedState,
     compose(
-      applyMiddleware(middleware, ...middlewares, thunk, createLogger()),
+      applyMiddleware(middleware, ...middlewares, sagaMiddleware, createLogger()),
       DevTools.instrument()
     )
   )
@@ -29,7 +29,10 @@ const configureStore = (routerReducer, middleware) => preloadedState => {
     })
   }
 
-  return store
+  return {
+    ...store,
+    runSaga: sagaMiddleware.run
+  }
 }
 
 export default configureStore
