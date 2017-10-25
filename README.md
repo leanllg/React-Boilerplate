@@ -3,11 +3,11 @@ React boilerplate contains redux, react-router v4 and so on
 
 ## File Structure
 ```
-\React-Biolerplate
-  \config
-  \public
-  \scripts
-  \src
+React-Biolerplate\
+  config\
+  public\
+  scripts\
+  src\
     actions\
       index.js
     containers\
