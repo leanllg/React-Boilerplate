@@ -4,39 +4,39 @@ React boilerplate contains redux, react-router v4 and so on
 ## File Structure
 ```
 \React-Biolerplate
-	\config
-	\public
-	\scripts
-	\src
-		actions\
-			index.js
-		containers\
-			App.js\
-			DevTools.js\
-		reducers\
-			index.js
-			selectors.js
-		routes\
-			routes.dev.js
-			index.js
-			routes.prod.js
-		static\
-			imgs\
-			css\
-		store\
-			configureStore.dev.js
-			configureStore.js
-			configureStore.prod.js
-		utils\
-			middlewares\
-				index.js
-			sagas\
-				index.js
-	.gitignore
-	LICENSE
-	README.md
-	package.json
-	yarn.lock
+  \config
+  \public
+  \scripts
+  \src
+    actions\
+      index.js
+    containers\
+      App.js
+	  DevTools.js
+	reducers\
+	  index.js
+	  selectors.js
+	routes\
+	  routes.dev.js
+	  index.js
+	  routes.prod.js
+	static\
+	  imgs\
+	  css\
+	store\
+	  configureStore.dev.js
+	  configureStore.js
+	  configureStore.prod.js
+	utils\
+	  middlewares\
+	    index.js
+	  sagas\
+	  index.js
+  .gitignore
+  LICENSE
+  README.md
+  package.json
+  yarn.lock
 ```
 
 
