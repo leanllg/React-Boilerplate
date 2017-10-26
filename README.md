@@ -31,7 +31,7 @@ React-Biolerplate\
 	  middlewares\
 	    index.js
 	  sagas\
-	  index.js
+	    index.js
   .gitignore
   LICENSE
   README.md
