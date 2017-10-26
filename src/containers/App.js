@@ -32,7 +32,7 @@ class App extends Component {
           }
           {!isFetching &&
           <a href="#"
-             onClick={()=>this.handleRefreshClick()}>
+             onClick={(e)=>this.handleRefreshClick(e)}>
             Refresh
           </a>
           }

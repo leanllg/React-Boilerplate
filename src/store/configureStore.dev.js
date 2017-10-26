@@ -1,6 +1,5 @@
 import {createStore, combineReducers, applyMiddleware, compose} from 'redux'
 import createSagaMiddleware from 'redux-saga'
-import {createLogger} from 'redux-logger'
 
 import reducers from '../reducers'
 import middlewares from '../utils/middlewares'
@@ -16,7 +15,7 @@ const configureStore = (routerReducer, middleware) => preloadedState => {
     }),
     preloadedState,
     compose(
-      applyMiddleware(middleware, ...middlewares, sagaMiddleware, createLogger()),
+      applyMiddleware(middleware, ...middlewares, sagaMiddleware),
       DevTools.instrument()
     )
   )
