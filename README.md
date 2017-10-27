@@ -24,22 +24,22 @@ React-Biolerplate\
       Home\
         index.js
       DevTools.js
-	reducers\
-	  index.js
-	  selectors.js
-	routes\
-	  routes.dev.js
-	  index.js
-	  routes.prod.js
-	store\
-	  configureStore.dev.js
-	  configureStore.js
-	  configureStore.prod.js
-	utils\
-	  middlewares\
-	    index.js
-	  sagas\
-	    index.js
+    reducers\
+      index.js
+      selectors.js
+    routes\
+      routes.dev.js
+      index.js
+      routes.prod.js
+    store\
+      configureStore.dev.js
+      configureStore.js
+      configureStore.prod.js
+    utils\
+      middlewares\
+        index.js
+      sagas\
+        index.js
   stories\
     index.js
   .gitignore
