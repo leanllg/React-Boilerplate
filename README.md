@@ -4,15 +4,26 @@ React boilerplate contains redux, react-router v4 and so on
 ## File Structure
 ```
 React-Biolerplate\
+  build\
   config\
   public\
   scripts\
+  .storybook\
+    config.js
+    webpack.config.js
+    addons.js
   src\
     actions\
       index.js
+    components\
+      Home\
+        images\
+        index.js
+        index.css
     containers\
-      App.js
-	  DevTools.js
+      Home\
+        index.js
+      DevTools.js
 	reducers\
 	  index.js
 	  selectors.js
@@ -20,9 +31,6 @@ React-Biolerplate\
 	  routes.dev.js
 	  index.js
 	  routes.prod.js
-	static\
-	  imgs\
-	  css\
 	store\
 	  configureStore.dev.js
 	  configureStore.js
@@ -32,6 +40,8 @@ React-Biolerplate\
 	    index.js
 	  sagas\
 	    index.js
+  stories\
+    index.js
   .gitignore
   LICENSE
   README.md
