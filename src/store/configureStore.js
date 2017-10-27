@@ -8,7 +8,7 @@ const middleware = routerMiddleware(history)
 let configureStore;
 
 if (process.env.NODE_ENV === 'production') {
-  configureStore = require('./configureStore.prod')
+  configureStore = require('./configureStore.prod').default
 } else {
   configureStore = require('./configureStore.dev').default
 }

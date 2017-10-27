@@ -1,3 +1,6 @@
+/**
+ * Created by LLGZONE on 2017/10/27.
+ */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 

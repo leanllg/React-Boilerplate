@@ -4,7 +4,7 @@ import {Provider} from 'react-redux'
 import {ConnectedRouter} from 'react-router-redux'
 import {Route} from 'react-router'
 
-import App from '../containers/App'
+import App from '../containers/Home'
 import DevTools from '../containers/DevTools'
 import {AppContainer} from 'react-hot-loader'
 

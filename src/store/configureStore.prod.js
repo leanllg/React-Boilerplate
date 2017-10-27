@@ -5,7 +5,7 @@ import reducers from '../reducers'
 import middlewares from '../utils/middlewares'
 
 const sagaMiddleware = createSagaMiddleware()
-export const configureStore = (routerReducer, middleware) => preloadedState => (
+const configureStore = (routerReducer, middleware) => preloadedState => (
   {
     ...createStore(
       combineReducers({
@@ -18,3 +18,5 @@ export const configureStore = (routerReducer, middleware) => preloadedState => (
     runSaga: sagaMiddleware.run
   }
 )
+
+export default configureStore

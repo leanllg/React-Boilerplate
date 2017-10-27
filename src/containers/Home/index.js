@@ -1,9 +1,12 @@
+/**
+ * Created by LLGZONE on 2017/10/27.
+ */
 import React, { Component} from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { selectReddit, invalidateReddit } from '../actions'
-import Picker from '../components/Picker'
-import Posts from '../components/Posts'
+import { selectReddit, invalidateReddit } from '../../actions'
+import Picker from '../../components/Home/Picker'
+import Posts from '../../components/Home/Posts'
 
 class App extends Component {
   handleChange(nextReddit) {
