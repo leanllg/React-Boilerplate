@@ -16,6 +16,13 @@ React-Biolerplate\
     actions\
       index.js
     components\
+      Commons\
+        styles\
+          a.css
+        images\
+          a.jpg
+         Footer\
+           index.js
       Home\
         images\
         index.js
