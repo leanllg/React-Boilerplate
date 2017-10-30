@@ -21,7 +21,7 @@ React-Biolerplate\
           a.css
         images\
           a.jpg
-         Footer\
+        Footer\
            index.js
       Home\
         images\
