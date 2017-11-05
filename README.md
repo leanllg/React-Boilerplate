@@ -16,7 +16,7 @@ React-Biolerplate\
     actions\
       index.js
     components\
-      Commons\
+      commons\
         styles\
           a.css
         images\
