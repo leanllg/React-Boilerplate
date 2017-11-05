@@ -1,0 +1,1 @@
+{"version":3,"sources":["containers/Home/index.scss"],"names":[],"mappings":"AAAA,MACE,eACA,UAAY","file":"static/css/main.4a3083b7.css","sourcesContent":["div p {\n  font-size: 20px;\n  color: blue; }\n\n\n\n// WEBPACK FOOTER //\n// ./src/containers/Home/index.scss"],"sourceRoot":""}

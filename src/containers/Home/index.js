@@ -8,6 +8,8 @@ import { selectReddit, invalidateReddit } from '../../actions'
 import Picker from '../../components/Home/Picker'
 import Posts from '../../components/Home/Posts'
 
+import './index.scss'
+
 class App extends Component {
   handleChange(nextReddit) {
     this.props.dispatch(selectReddit(nextReddit))
