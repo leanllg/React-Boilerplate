@@ -16,7 +16,8 @@ module.exports = (baseConfig, env) => {
           options: {
             importLoaders: 2,
           },
-        }]
+        },
+		require.resolve('sass-loader')]
     });
   config.resolve.extensions.push('scss');
 
