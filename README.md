@@ -1,7 +1,7 @@
 # React-Boilerplate
 React boilerplate contains redux, react-router v4 and so on
 
-## File Structure
+## Folder Structure
 ```
 React-Biolerplate\
   build\
@@ -16,6 +16,13 @@ React-Biolerplate\
     actions\
       index.js
     components\
+      commons\
+        styles\
+          a.css
+        images\
+          a.jpg
+        Footer\
+           index.js
       Home\
         images\
         index.js
