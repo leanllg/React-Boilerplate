@@ -8,6 +8,7 @@ import { selectReddit, invalidateReddit } from '../../actions'
 import Picker from '../../components/Home/Picker'
 import Posts from '../../components/Home/Posts'
 
+import ad from '../../components/Home/ad1.jpg'
 import './index.scss'
 
 class App extends Component {
@@ -53,6 +54,7 @@ class App extends Component {
           <Posts posts={posts} />
         </div>
         }
+			  <img src={ad} />
       </div>
     )
   }
