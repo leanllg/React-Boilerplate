@@ -8,7 +8,7 @@ import { linkTo } from '@storybook/addon-links';
 import { Button, Welcome } from '@storybook/react/demo'
 import App from '../src/containers/Home'
 import configureStore from '../src/store/configureStore'
-import rootSaga from '../src/utils/sagas'
+import rootSaga from '../src/sagas'
 
 const store = configureStore()
 store.runSaga(rootSaga)

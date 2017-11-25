@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 import Root from './routes'
 import configureStore, {history} from './store/configureStore'
-import rootSaga from './utils/sagas'
+import rootSaga from './sagas'
 
 const store = configureStore()
 store.runSaga(rootSaga)
